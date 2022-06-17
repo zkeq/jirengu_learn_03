@@ -7,8 +7,6 @@ img {
 }
 .logo {
     background: gray;
-    /* display: inline-block; */
-    /* 这个可以删掉 */
     float: left;
     margin-top: 8px;
     margin-left: 10px ;
