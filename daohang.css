@@ -5,82 +5,70 @@ ul,ol{
 img {
     max-width: 100%;
 }
-.logo {
+.header {
+    display: flex;
+    /* 让图片背景的灰色不扩展 */
+    /* align-items: center; */
+    /* 靠右对其 */
+    /* justify-content: space-between; */
     background: gray;
-    float: left;
-    margin-top: 8px;
-    margin-left: 10px ;
+    padding: 4px 0;
+}
+.logo {
+    display: flex;
+    /* 图片在中间 */
+    align-items: center;
 }
 .logo > img {
     height: 26px;
-    vertical-align: top;
+    vertical-align: middle;
 }
-.clearfix::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-.nav {
-    float: right;
-    margin-left: 20px;
+ul{
+    display: flex;
+    margin-left: auto;
 }
 ul > li {
-    float: left;
-    padding: 0.3em 0.5em;
-    line-height: 32px;
-}
-ul {
-    display: inline-block;
-}
-header {
-    background-color: gray;
-    color: aliceblue;
+    padding: 4px;
 }
 .content {
+    display: flex;
     width: 800px;
-    /* margin: 0 auto; */
-    /* 下面这两句比较好 因为下面这两句没有覆盖本身的 auto */
-    /* CSS 有个重要的原则就是 不该写的代码不要写 改写的代码不要少 */
-    /* 如果你是个 块级元素 他们的宽度都是固定的，那么左边右边 margin auto 就会让你居中 */
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 .content > aside {
-   width: 200px;
-   height: 300px;
-   float: left;
-   background: #999;
+    background: #000;
+    width: 200px
 }
 .content > main {
-    height: 300px;
-    width: 500px;
-    float: left;
-    background: #ccc;
+    background: #666;
+    height: 400px;
+    flex-grow: 1;
 }
 .content > .ad {
-    height: 300px;
+    background: #999;
     width: 100px;
-    float: left;
-    background: black;
 }
 .imagesList {
-    outline: 1px solid green;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
 }
-.imagesList > .x > .image {
+.imagesList > .x {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+.image {
     width: 191px;
     height: 191px;
-    background: black;
+    background: gray;
     border: 1px solid red;
-    float: left;
+    /* 这里也可以 左边 6 右边 6 */
+    margin-left: 6px;
+    margin-right: 6px;
+    /*margin-right: 12px;*/
     margin-bottom: 10px;
-    margin-right: 12px;
-}
-/* 负 margin  */
-.imagesList > .x {
-    margin-right: -12px;
 }
